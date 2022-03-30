@@ -9,6 +9,8 @@
   <body>
     <h1>calculo de conversão de l/ha para ml/l por bomba costal</h1>
 
+    <img src="bula.png" alt="bula" />
+
     <h3>calculo de volume da calda por ha</h3>
     <p>D= (doselha / volumelha) x volume do tanque</p>
     <p>D= <strong>l/ha</strong> / volume <strong>l/ha</strong> x <strong>l</strong></p>
@@ -46,6 +48,18 @@
       ml/l= 10 <strong>ml</strong> por litro
     </p>
 
+    <form>
+      <label for="doselha">doselha</label>
+      <input type="number" name="doselha" id="doselha" />
+      <label for="volumelha">volume l/ha</label>
+      <input type="number" name="volumelha" id="volumelha" />
+      <label for="volume">volume l</label>
+      <input type="number" name="volume" id="volume" />
+      <button type="submit">calcular</button>
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- http://agrofit.agricultura.gov.br/agrofit_cons/!ap_produto_form_consulta_cons -->
