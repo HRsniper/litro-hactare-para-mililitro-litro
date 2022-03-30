@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>l/ha para ml/l</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>L/ha para mL/L</title>
   </head>
+
   <body>
-    <h1>calculo de conversão de l/ha para ml/l por bomba costal</h1>
+    <h1>Cálculo de conversão de L/ha para mL/L e por Bomba costal</h1>
 
-    <img src="bula.png" alt="bula" />
+    <div class="bula">
+      <strong>Bula do fabricante:</strong>
+      <img src="bula.png" alt="bula" />
+    </div>
 
-    <h3>calculo de volume da calda por ha</h3>
-    <p>D= (doselha / volumelha) x volume do tanque</p>
-    <p>D= <strong>l/ha</strong> / volume <strong>l/ha</strong> x <strong>l</strong></p>
+    <div class="flex-column calc1">
+      <h2>Cálculo de dosagem agrotóxicos para o preparo da calda por hectare</h2>
+      <p>D = (doselha / volumelha) * volume do tanque <strong>➡️ Litros</strong></p>
+      <p>D = ((doselha / volumelha) * volume do tanque) * 1000 <strong>➡️ Mililitros</strong></p>
+      <p>
+        D = (<i>d</i> em <strong>L/ha</strong> / <i>v</i> em <strong>L/ha</strong>) * <i>vT</i> em
+        <strong>L</strong>
+      </p>
+    </div>
 
-    <h3>l/ha para l/l ↓</h3>
-    <p>
-      exemplo:<br />
-      D=(2,0 <strong>l/ha</strong> / 200 <strong>l/ha</strong>) x 100 <strong>l</strong><br />
-      D= 1 <strong>l</strong> de produto/veneno para 100 <strong>l</strong> de água no tanque
-    </p>
+    <div class="flex-column calc2">
+      <h3>L/ha para L/L ou mL/L</h3>
+      <div>
+        <p>Exemplo:</p>
+        <p>D = (2,0<strong>L/ha</strong> / 200<strong>L/ha</strong>) * 100<strong>L</strong></p>
+        <p>D = 1<strong>L</strong> de agrotóxico para 100<strong>L</strong> de água no tanque</p>
+      </div>
 
-    <h3>l/l para ml/Bomba Costal ↓</h3>
-    <p>
-      volume da bomba costal vB= 20 <strong>l</strong> de água<br />
-      B= volume do tanque da calda <strong>l</strong> / vB <i>volume da bomba costal <strong>l</strong></i
-      ><br />
-    </p>
-    <p>
-      exemplo:<br />
-      B=100 <strong>l</strong> / 20 <strong>l</strong><br />
-      B=5 bombas costais com 100 <strong>l</strong> de água<br />
-    </p>
-    <p>ml= D <i>l/l</i> / B <i>bomba costais por litros de água</i></p>
-    <p>
-      exemplo:<br />
-      ml= 0,2 <strong>l</strong><br />
-      ml=0,2 <strong>l</strong> x 1000 <strong>ml</strong><br />
-      ml= 200 <strong>ml</strong> para 20 <strong>l</strong> de água
-    </p>
+      <div>
+        <p>Exemplo:</p>
+        <p>D = (2,0<strong>L/ha</strong> / 200<strong>L/ha</strong>) * 13<strong>L</strong></p>
+        <p>D = 0,13<strong>L</strong> de agrotóxico para 13<strong>L</strong> de água em uma bomba costal</p>
+        <span>Ou</span>
+        <p>D = ((2,0<strong>L/ha</strong> / 200<strong>L/ha</strong>) * 100<strong>L</strong>) * 1000</p>
+        <p>D = 130<strong>mL</strong> de agrotóxico para 13<strong>L</strong> de água em uma bomba costal</p>
+      </div>
+    </div>
 
-    <h3>ml/l ↓</h3>
-    <p>ml/l= <strong>ml</strong> por bomba costal / volume da bomba costal <strong>l</strong></p>
-    <p>
-      ml/l= 200 <strong>ml</strong> / 20 <strong>l</strong><br />
-      ml/l= 10 <strong>ml</strong> por litro
-    </p>
+    <div class="flex-column calc3">
+      <h3>Bomba costal/Volume de água e mL/Bomba costal</h3>
+      <div>
+        <p>Volume de água da Bomba costal (<i>vB</i> em <strong>L</strong>)</p>
+        <p>Volume de água do tanque (<i>vT</i> em <strong>L</strong>)</p>
+        <p>B = <i>vT</i> / <i>vB</i> <strong>➡️ Bombas</strong></p>
+      </div>
+
+      <div>
+        <p>Exemplo:</p>
+        <p>B = 100<strong>L</strong> / 20<strong>L</strong></p>
+        <p>B = 5<strong>Bombas</strong> costais para 100<strong>L</strong> de água no tanque</p>
+      </div>
+
+      <div>
+        <p>Dosagem (D em <strong>L</strong>)</p>
+        <p>Bomba costais pelo volume de água no tanque (B em <strong>Bombas</strong>)</p>
+        <p><i>mL/B</i> = D / B <strong>➡️ Litros</strong></p>
+        <p><i>mL/B</i> = (D / B) * 1000 <strong>➡️ Mililitros</strong></p>
+      </div>
+
+      <div>
+        <p>Exemplo:</p>
+        <p><i>mL/B</i> = 1<strong>L</strong> / 5<strong>Bombas</strong></p>
+        <p><i>mL/B</i> = 0,2<strong>L</strong> de agrotóxico por <strong>Bomba</strong></p>
+        <span>Ou</span>
+        <p><i>mL/B</i> = (1<strong>L</strong> / 5<strong>Bombas</strong>) * 1000</p>
+        <p><i>mL/B</i> = 200<strong>mL</strong> de agrotóxico por <strong>Bomba</strong></p>
+      </div>
+    </div>
+
+    <div class="flex-column calc4">
+      <h3>mL/L</h3>
+      <div>
+        <p>Dosagem de agrotóxico por Bomba (<i>ml/B</i> em <strong>mL</strong>)</p>
+        <p>Volume de água da bomba (<i>vB</i> em <strong>L</strong>)</p>
+        <p><i>mL/L</i> = <i>mL/B</i> / <i>vB</i> <strong>➡️ Mililitros</strong></p>
+      </div>
+
+      <div>
+        <p>Exemplo:</p>
+        <p><i>mL/L</i> = 200<strong>mL</strong> / 20<strong>L</strong></p>
+        <p><i>mL/L</i> = 10<strong>mL</strong> de agrotóxico por litro de água</p>
+      </div>
+    </div>
 
     <form action="#" onsubmit="handlerOnSubmit()">
       <fieldset>

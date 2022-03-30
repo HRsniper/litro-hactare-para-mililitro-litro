@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.bula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #f00;
+}
+
+.bula strong {
+  font-size: 1.5rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc1 {
+}
+
+.calc2 {
+}
+
+.calc3 {
+}
+
+.calc4 {
+}
