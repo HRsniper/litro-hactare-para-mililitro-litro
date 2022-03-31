@@ -16,6 +16,32 @@
       <img src="bula.png" alt="bula" />
     </div>
 
+    <form action="#" onsubmit="handlerOnSubmit()">
+      <fieldset class="flex-column">
+        <legend>Cálculo de conversão</legend>
+        <p>
+          <label for="doselha">Doselha</label>
+          <input type="number" name="doselha" id="doselha" placeholder="2.0" />
+          <strong>L/ha</strong>
+        </p>
+
+        <p>
+          <label for="volumelha">Volumelha</label>
+          <input type="number" name="volumelha" id="volumelha" placeholder="200.0" />
+          <strong>L/ha</strong>
+        </p>
+
+        <p>
+          <label for="volume">Volume de água</label>
+          <input type="number" name="volume" id="volume" placeholder="100.0" />
+          <strong>L</strong>
+        </p>
+
+        <button type="submit">Calcular</button>
+        <p id="result"></p>
+      </fieldset>
+    </form>
+
     <div class="flex-column calc1">
       <h2>Cálculo de dosagem agrotóxicos para o preparo da calda por hectare</h2>
       <p>D = (doselha / volumelha) * volume do tanque <strong>➡️ Litros</strong></p>
@@ -91,32 +117,6 @@
         <p><i>mL/L</i> = 10<strong>mL</strong> de agrotóxico por litro de água</p>
       </div>
     </div>
-
-    <form action="#" onsubmit="handlerOnSubmit()">
-      <fieldset>
-        <p>
-          <label for="doselha">Doselha</label>
-          <input type="number" name="doselha" id="doselha" placeholder="2.0" />
-          <strong>L/ha</strong>
-        </p>
-
-        <p>
-          <label for="volumelha">Volumelha</label>
-          <input type="number" name="volumelha" id="volumelha" placeholder="200.0" />
-          <strong>L/ha</strong>
-        </p>
-
-        <p>
-          <label for="volume">Volume de água</label>
-          <input type="number" name="volume" id="volume" placeholder="100.0" />
-          <strong>L</strong>
-        </p>
-
-        <button type="submit">Calcular</button>
-      </fieldset>
-    </form>
-
-    <p id="result"></p>
 
     <script src="script.js"></script>
   </body>

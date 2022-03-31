@@ -5,6 +5,10 @@ body {
   /* align-items: center; */
 }
 
+body form {
+  margin-top: 2rem;
+}
+
 .bula {
   display: flex;
   flex-direction: column;
