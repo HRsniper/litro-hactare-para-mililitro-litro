@@ -29,9 +29,19 @@ function handlerOnSubmit(event) {
   const Dml = dosageInMilliliter(doselhaId.value, volumelhaId.value, volumeId.value);
   const mll = milliliterPerLiter(Dml, volumeId.value);
 
-  resultId.innerHTML = `${Dl}L de agrotóxico para ${volumeId.value}L de água<br/>`;
-  resultId.innerHTML += `${Dml}mL de agrotóxico para ${volumeId.value}L de água<br/>`;
-  resultId.innerHTML += `${mll}mL de agrotóxico por litro de água`;
+  resultId.innerHTML = `${Dl.toFixed(1)}L de agrotóxico para ${volumeId.value}L de água<br/>`;
+  resultId.innerHTML += `${Dml.toFixed(1)}mL de agrotóxico para ${volumeId.value}L de água<br/>`;
+  resultId.innerHTML += `${mll.toFixed(1)}mL de agrotóxico por litro de água`;
+
+  alert(`
+  ${Dl.toFixed(1)}L de agrotóxico para ${volumeId.value}L de água
+  ${Dml.toFixed(1)}mL de agrotóxico para ${volumeId.value}L de água
+  ${mll.toFixed(1)}mL de agrotóxico para 1L de água
+
+  ${Dl.toFixed(1)}L/${volumeId.value}L
+  ${Dml.toFixed(1)}mL/${volumeId.value}L
+  ${mll.toFixed(1)}mL/1L
+  `);
 }
 
 function dosageInLiter(doselha, volumelha, volumeOfWater) {
