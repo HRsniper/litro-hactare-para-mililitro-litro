@@ -1,3 +1,4 @@
+/*
 const d = 2; // l
 const v = 200; // l
 const vT = 100; //l
@@ -14,6 +15,7 @@ console.log({ mlB: mlB + "mL/Bomba" });
 
 const mll = mlB / vB; // ml
 console.log({ mll: mll + "mL/L" });
+*/
 
 const doselhaId = document.getElementById("doselha");
 const volumelhaId = document.getElementById("volumelha");
@@ -23,24 +25,30 @@ const resultId = document.getElementById("result");
 function handlerOnSubmit(event) {
   event?.preventDefault();
   console.log("Formulário enviado");
-  dosage(doselhaId.value, volumelhaId.value, volumeId.value);
+  const Dl = dosageInLiter(doselhaId.value, volumelhaId.value, volumeId.value);
+  const Dml = dosageInMilliliter(doselhaId.value, volumelhaId.value, volumeId.value);
+  const mll = milliliterPerLiter(Dml, volumeId.value);
+
+  resultId.innerHTML = `${Dl}L de agrotóxico para ${volumeId.value}L de água<br/>`;
+  resultId.innerHTML += `${Dml}mL de agrotóxico para ${volumeId.value}L de água<br/>`;
+  resultId.innerHTML += `${mll}mL de agrotóxico por litro de água`;
 }
 
-function dosage(doselha, volumelha, volume) {
-  const dosageInLiter = ((doselha / volumelha) * volume).toFixed(1); // l
-  const dosageInMilliliter = (dosageInLiter * 1000).toFixed(1); // ml
-  const dosageMilliliterPerLiter = milliliterPerLiter(dosageInMilliliter, volume); // ml/l
-
-  resultId.innerHTML = `${dosageInLiter}L de agrotóxico para ${volume}L de água<br/>`;
-  resultId.innerHTML += `${dosageInMilliliter}mL de agrotóxico para ${volume}L de água<br/>`;
-  resultId.innerHTML += `${dosageMilliliterPerLiter}mL de agrotóxico por litro de água`;
-
-  console.log({ Dl: dosageInLiter + "L", Dml: dosageInMilliliter + "mL" });
-  return { inLiter: dosageInLiter, inMilliliter: dosageInMilliliter };
+function dosageInLiter(doselha, volumelha, volumeOfWater) {
+  const D = (doselha / volumelha) * volumeOfWater; // l
+  console.log({ D: D + "L" });
+  return D;
 }
 
-function milliliterPerLiter(dosageInMilliliter, volume) {
-  const milliliterPerLiter = (dosageInMilliliter / volume).toFixed(1); // ml/l
+function dosageInMilliliter(doselha, volumelha, volumeOfWater) {
+  const MULTIPLIES = 1000;
+  const D = (doselha / volumelha) * volumeOfWater * MULTIPLIES; // ml
+  console.log({ D: D + "mL" });
+  return D;
+}
+
+function milliliterPerLiter(dosageInMilliliter, PumpWaterVolume) {
+  const milliliterPerLiter = dosageInMilliliter / PumpWaterVolume; // ml/l
   console.log({ mll: milliliterPerLiter + "mL/L" });
   return milliliterPerLiter;
 }
