@@ -45,20 +45,20 @@ function handlerOnSubmit(event) {
 }
 
 function dosageInLiter(doselha, volumelha, volumeOfWater) {
-  const D = (doselha / volumelha) * volumeOfWater; // l
+  const D = math.evaluate((doselha / volumelha) * volumeOfWater); // l
   console.log({ D: D + "L" });
   return D;
 }
 
 function dosageInMilliliter(doselha, volumelha, volumeOfWater) {
   const MULTIPLIES = 1000;
-  const D = (doselha / volumelha) * volumeOfWater * MULTIPLIES; // ml
+  const D = math.evaluate(((doselha / volumelha) * volumeOfWater) * MULTIPLIES); // ml
   console.log({ D: D + "mL" });
   return D;
 }
 
 function milliliterPerLiter(dosageInMilliliter, PumpWaterVolume) {
-  const milliliterPerLiter = dosageInMilliliter / PumpWaterVolume; // ml/l
+  const milliliterPerLiter = math.evaluate(dosageInMilliliter / PumpWaterVolume); // ml/l
   console.log({ mll: milliliterPerLiter + "mL/L" });
   return milliliterPerLiter;
 }
