@@ -22,6 +22,14 @@ const volumelhaId = document.getElementById("volumelha");
 const volumeId = document.getElementById("volume");
 const resultId = document.getElementById("result");
 
+function handleThousandLiters(volume) {
+  if (volume.includes(".000")) {
+    return volume.replace(".000", "");
+  }
+
+  return volume;
+}
+
 function handlerOnSubmit(event) {
   event?.preventDefault();
   console.log("Formulário enviado");
@@ -34,11 +42,11 @@ function handlerOnSubmit(event) {
   resultId.innerHTML += `${mll.toFixed(1)}mL de agrotóxico para 1L de água`;
 
   alert(`
-  ${Dl.toFixed(3)}L de agrotóxico para ${volumeId.value}L de água
+  ${handleThousandLiters(Dl.toFixed(3))}L de agrotóxico para ${volumeId.value}L de água
   ${Dml.toFixed(1)}mL de agrotóxico para ${volumeId.value}L de água
   ${mll.toFixed(1)}mL de agrotóxico para 1L de água
 
-  ${Dl.toFixed(3)}L/${volumeId.value}L
+  ${handleThousandLiters(Dl.toFixed(3))}L/${volumeId.value}L
   ${Dml.toFixed(1)}mL/${volumeId.value}L
   ${mll.toFixed(1)}mL/1L
   `);
@@ -52,7 +60,7 @@ function dosageInLiter(doselha, volumelha, volumeOfWater) {
 
 function dosageInMilliliter(doselha, volumelha, volumeOfWater) {
   const MULTIPLIES = 1000;
-  const D = math.evaluate(((doselha / volumelha) * volumeOfWater) * MULTIPLIES); // ml
+  const D = math.evaluate((doselha / volumelha) * volumeOfWater * MULTIPLIES); // ml
   console.log({ D: D + "mL" });
   return D;
 }
