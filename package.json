@@ -1,0 +1,22 @@
+{
+  "name": "lhamll",
+  "version": "1.0.0",
+  "description": "![exemplo](exemplo.png)",
+  "main": "script.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRsniper/litro-hactare-para-mililitro-litro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRsniper/litro-hactare-para-mililitro-litro/issues"
+  },
+  "homepage": "https://github.com/HRsniper/litro-hactare-para-mililitro-litro#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

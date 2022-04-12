@@ -1,0 +1,11 @@
+
+version: "3.8"
+
+services:
+  app:
+    container_name: app
+    image: node:17.8.0-alpine3.15
+    working_dir: /home/app/src
+    volumes:
+      - .:/home/app/src
+    command: tail -f /dev/null
